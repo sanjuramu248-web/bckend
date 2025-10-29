@@ -20,9 +20,9 @@ app.use(cookieParser())
 app.use(express.json({ limit: "16kb" }))
 app.use(express.urlencoded({ limit: "16kb", extended: true }))
 
-import userRoutes from "../src/routes/userRoutes"
-import productRoutes from "../src/routes/productRoutes"
-import cartRoutes from "../src/routes/cartRoutes"
+import userRoutes from "./routes/userRoutes"
+import productRoutes from "./routes/productRoutes"
+import cartRoutes from "./routes/cartRoutes"
 
 app.use("/v1/api/users", userRoutes)
 app.use("/v1/api/products", productRoutes)

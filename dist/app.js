@@ -21,9 +21,9 @@ app.use((0, cors_1.default)({
 app.use((0, cookie_parser_1.default)());
 app.use(express_1.default.json({ limit: "16kb" }));
 app.use(express_1.default.urlencoded({ limit: "16kb", extended: true }));
-const userRoutes_1 = __importDefault(require("../src/routes/userRoutes"));
-const productRoutes_1 = __importDefault(require("../src/routes/productRoutes"));
-const cartRoutes_1 = __importDefault(require("../src/routes/cartRoutes"));
+const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
+const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
+const cartRoutes_1 = __importDefault(require("./routes/cartRoutes"));
 app.use("/v1/api/users", userRoutes_1.default);
 app.use("/v1/api/products", productRoutes_1.default);
 app.use("/v1/api/cart", cartRoutes_1.default);
